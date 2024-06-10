@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".Level2Activity">
+
+    <Button
+        android:id="@+id/barva"
+        android:layout_width="55dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#878787"
+        android:text="B"
+        app:cornerRadius="9dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/gumaToggle"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="ToggleButton"
+        android:textOff="GUMA OFF"
+        android:textOn="GUMA ON"
+        app:layout_constraintStart_toEndOf="@+id/barva"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="335dp"
+        android:layout_height="476dp"
+        android:layout_marginEnd="16dp"
+        android:layout_weight="1"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SBvelikost"
+        app:srcCompat="@drawable/frida" />
+
+    <com.example.zapoctak.Platno
+        android:id="@+id/platno"
+        android:layout_width="339dp"
+        android:layout_height="235dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/TLACvyhodnotit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/TLACvyhodnotit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#FFFFFF"
+        android:onClick="vyhodnoceni"
+        android:text="vyhodnotit"
+        android:textColor="#000000"
+        android:textSize="35sp"
+        app:cornerRadius="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/platno" />
+
+    <SeekBar
+        android:id="@+id/SBvelikost"
+        android:layout_width="165dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/gumaToggle"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TLACvyhodnotit">
+
+        <Button
+            android:id="@+id/TLACpredloha"
+            android:layout_width="171dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#424242"
+            android:onClick="predloha"
+            android:text="předloha"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            app:cornerRadius="7dp" />
+
+        <Button
+            android:id="@+id/TLACnavod"
+            android:layout_width="147dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:backgroundTint="#3C3C3C"
+            android:onClick="navod"
+            android:text="návod"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            app:cornerRadius="7dp"
+            tools:layout_editor_absoluteX="328dp" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
